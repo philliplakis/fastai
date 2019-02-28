@@ -39,23 +39,16 @@ echo -e "\n###\n"
 
 wget https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
 bash Anaconda3-5.0.1-Linux-x86_64.sh -b
-cd
+
+echo 'export PATH=~/anaconda3/bin:$PATH' >> ~/.bashrc
+export PATH=~/anaconda3/bin:$PATH
+source ~/.bashrc
 
 echo -e "\n###\n"
 echo -e "Installing FastAI v3"
 echo -e "\n###\n"
 
-git clone https://github.com/fastai/course-v3.git
-cd course-v3/
-echo 'export PATH=~/anaconda3/bin:$PATH' >> ~/.bashrc
-export PATH=~/anaconda3/bin:$PATH
-source ~/.bashrc
-conda install -c pytorch cuda100 
-conda env update
-echo 'source activate fastai' >> ~/.bashrc
-source activate fastai
-source ~/.bashrc
-cd ..
+conda install -c pytorch -c fastai fastai
 
 echo -e "\n###\n"
 echo -e "Downloading Dogs Cats Dataset"
@@ -65,8 +58,8 @@ mkdir data
 cd data
 wget http://files.fast.ai/data/dogscats.zip
 unzip -q dogscats.zip
-cd ../course-v3/nbs/dl1/
-ln -s ~/data ./
+# cd ../course-v3/nbs/dl1/
+# ln -s ~/data ./
 
 echo -e "\n###\n"
 echo -e "Preparing Jupyter Enviroment"
@@ -81,7 +74,6 @@ pip install ipywidgets
 jupyter nbextension enable --py widgetsnbextension --sys-prefix
 
 echo -e "\n###\n"
-echo -e "Finished with no errors."
 echo -e "\n\nSystem will now reboot!"
 echo -e "\n###\n"
 
