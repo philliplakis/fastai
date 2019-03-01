@@ -3,12 +3,9 @@
 #  COURSE v3
 #  FastAI 1.0
 #  Please do note that running scripts like this from the Internet is a dangerous practice
-sudo service lightdm stop
 
-wget http://us.download.nvidia.com/XFree86/Linux-x86_64/418.43/NVIDIA-Linux-x86_64-418.43.run
-bash NVIDIA-Linux-x86_64-418.43.run
-
-sudo service lightdm start
+#wget http://us.download.nvidia.com/XFree86/Linux-x86_64/418.43/NVIDIA-Linux-x86_64-418.43.run
+#bash NVIDIA-Linux-x86_64-418.43.run
 
 echo -e "\n###\n"
 echo -e "Installing Anaconda3"
