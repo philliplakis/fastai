@@ -41,17 +41,6 @@ source activate fastai
 source ~/.bashrc
 
 echo -e "\n###\n"
-echo -e "Downloading Dogs Cats Dataset"
-echo -e "\n###\n"
-
-mkdir data
-cd data
-wget http://files.fast.ai/data/dogscats.zip
-unzip -q dogscats.zip
-# cd ../course-v3/nbs/dl1/
-# ln -s ~/data ./
-
-echo -e "\n###\n"
 echo -e "Preparing Jupyter Enviroment"
 echo -e "\n###\n"
 
