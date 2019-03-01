@@ -55,7 +55,7 @@ echo -e "\n###\n"
 echo -e "Preparing Jupyter Enviroment"
 echo -e "\n###\n"
 
-jupyter notebook --generate-config
+jupyter notebook --generate-config --allow-root
 echo "c.NotebookApp.ip = '0.0.0.0'" >> ~/.jupyter/jupyter_notebook_config.py
 echo "c.NotebookApp.open_browser = False" >> ~/.jupyter/jupyter_notebook_config.py
 # The below line is for Rendsolve's Jupyter Portal. Can be removed if running local
